@@ -1,58 +1,78 @@
-#Meu Portfólio com Node.js
-Este é um projeto de portfólio pessoal, construído do zero para demonstrar habilidades em desenvolvimento web back-end e front-end. O sistema utiliza Node.js para criar um servidor local, que hospeda páginas estáticas em HTML, além de gerenciar rotas e interações de formulários.
+# Meu Portfólio com Node.js
 
-#Funcionalidades Principais
-Servidor HTTP em Node.js: O servidor foi configurado para rodar localmente na porta 3009, gerenciando as requisições e respostas do navegador.
+  
 
-#Rotas Dinâmicas: Implementação de um sistema de rotas que serve diferentes páginas HTML (index.html, servico.html, contato.html).
+-----
 
-#Redirecionamento de URL: A rota /orcamentos foi configurada para redirecionar automaticamente para a página /contato, com um status HTTP 301.
+### 💻 Visão Geral do Projeto
 
-#Tratamento de Erros: Qualquer URL não mapeada é capturada e redireciona o usuário para uma página de erro personalizada (404 Not Found).
+Este é um projeto de portfólio pessoal, construído do zero para demonstrar habilidades em desenvolvimento web **back-end e front-end**. O sistema utiliza **Node.js** para criar um servidor local, que hospeda páginas estáticas em HTML, além de gerenciar rotas e interações de formulários.
 
-#Processamento de Formulário: A página de contato envia dados via método POST para o servidor, que processa a requisição e salva as informações em um arquivo contatos.json.
+O objetivo é criar uma presença digital limpa e funcional, onde a transição entre as páginas é fluida e segura.
 
-#Design Responsivo e Moderno: As páginas foram estilizadas com CSS e o framework Bootstrap para garantir uma boa experiência em qualquer dispositivo.
+> **Sugestão:** Você pode adicionar uma imagem ou GIF do seu portfólio aqui para um impacto visual ainda maior\!
+> `![Captura de tela do projeto](caminho/para/sua-imagem.png)`
 
-#Tecnologias Utilizadas
+-----
 
-Back-end:
+### ✨ Funcionalidades Principais
 
-Node.js: Ambiente de execução JavaScript.
+  * **Roteamento Personalizado**: Um servidor Node.js que gerencia as requisições para rotas como `/`, `/servico` e `/contato`.
+  * **Formulário de Contato Dinâmico**: A página de contato coleta dados dos usuários (nome, telefone, email) e os salva em um arquivo `contatos.json`.
+  * **Redirecionamento Inteligente**: A rota `/orcamentos` foi configurada para redirecionar automaticamente para a página `/contato`, melhorando a experiência do usuário.
+  * **Página de Erro (`404`)**: Tratamento de erros elegante para URLs inexistentes, que direciona o usuário para uma página de erro personalizada.
+  * **Design Responsivo**: Layout otimizado para dispositivos móveis e desktops, garantindo que o portfólio seja acessível em qualquer tela.
 
-HTTP: Módulo nativo para criar o servidor.
+-----
 
-File System (fs): Módulo para ler e escrever arquivos.
+### 🛠️ Tecnologias Utilizadas
 
-Path: Módulo para manipular caminhos de arquivos.
+O projeto foi construído usando as seguintes tecnologias:
 
-Query String: Módulo para analisar os dados do formulário.
+**Back-end:**
 
-#Front-end:
+  * `Node.js`
+  * Módulo `HTTP` (nativo)
+  * Módulo `fs` (File System)
+  * Módulo `path`
+  * Módulo `querystring`
 
-HTML5 & CSS3: Estrutura e estilo das páginas.
+**Front-end:**
 
-Bootstrap 5: Framework CSS para design responsivo.
+  * `HTML5`
+  * `CSS3`
+  * `Bootstrap 5` (para um design responsivo e moderno)
+  * `Font Awesome` (para os ícones)
 
-Font Awesome: Biblioteca de ícones.
+-----
 
-#Como Rodar o Projeto
-Para visualizar e testar o projeto localmente, siga os passos abaixo:
+### 🚀 Como Executar o Projeto
 
-#Clone o repositório:
-git clone https://github.com/SEU_USUARIO/meu-portfolio-com-nodejs.git
+Para testar o portfólio em sua máquina local, siga estes passos:
 
-#Navegue até a pasta do projeto:
-cd meu-portfolio-com-nodejs
+1.  **Clone o repositório:**
+    ```bash
+    git clone https://github.com/SEU_USUARIO/meu-portfolio-com-nodejs.git
+    ```
+2.  **Navegue até a pasta do projeto:**
+    ```bash
+    cd meu-portfolio-com-nodejs
+    ```
+3.  **Inicie o servidor Node.js:**
+    ```bash
+    node server.js
+    ```
+4.  **Acesse o site** abrindo seu navegador e indo para:
+    `http://localhost:3009`
 
-#Instale as dependências (se houver):
-npm install
+-----
 
-#Inicie o servidor:
-node server.js
+### 🧑 Autor
 
-#Acesse o site no seu navegador em:
-http://localhost:3009
+**Marcelo David Barudi**
+
+  * [**LinkedIn**](https://www.linkedin.com/in/marcelo-barudi/)
+  * [**GitHub**](https://github.com/MBARUDI)
 
 
 # 📦 APRENDIZADO NODEJS
