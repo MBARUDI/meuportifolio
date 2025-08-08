@@ -1,0 +1,240 @@
+/* Estilos Gerais para a visualização no navegador */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Estilos para o contêiner principal do currículo */
+.container-fluid {
+    padding: 0 15px;
+}
+
+/* Estilos para cada "tela" (div.tela) no navegador */
+.tela {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    box-sizing: border-box;
+}
+
+/* Centraliza títulos em telas */
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    color: #003366;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Alinhamento de textos, listas e parágrafos à esquerda */
+section, ul, li, p, .p-1, .p-3, .p-2 {
+    text-align: left;
+}
+
+/* Margem para o título principal h1 dentro da primeira tela (na tela) */
+.tela h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-top: 0;
+    font-size: 2.5em;
+}
+
+/* Ajusta espaçamento entre seções */
+section {
+    margin-bottom: 28px;
+}
+
+/* Garante que listas e textos não ultrapassem a tela */
+ul, li, p {
+    max-width: 100%;
+    word-break: break-word;
+}
+
+/* Estilos para os itens de Habilidades, Tecnologias, etc. */
+.p-3, .p-2 {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* --- Estilos para alinhar ícones em listas usando Flexbox (NA TELA) --- */
+ul li {
+    list-style: none; /* Remove o marcador de lista padrão */
+    margin-left: 0; /* Remove qualquer margem padrão de lista */
+    padding-left: 0; /* Remove qualquer padding padrão de lista */
+    display: flex; /* Transforma o li em um contêiner flexível */
+    align-items: flex-start; /* Alinha os itens ao início (topo) se eles tiverem alturas diferentes */
+    margin-bottom: 8px; /* Espaço entre os itens da lista */
+}
+
+ul li::before {
+    content: ''; /* Remove o marcador de lista padrão que viria com list-style-type */
+}
+
+/* Estilos para alinhar os ícones dentro dos p-2 dos blocos de tecnologia/atuação (NA TELA) */
+.p-2 {
+    display: flex; /* Transforma o p-2 em contêiner flex */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    gap: 8px; /* Espaço entre o ícone e o texto */
+    text-align: left; /* Alinha o texto à esquerda dentro da caixa p-2 */
+}
+
+/* Ajuste para o texto dentro do p-2 (se o ícone e o texto não estiverem no mesmo span) */
+.p-2 span { /* Se você envolver o texto em um span */
+    flex-grow: 1; /* Permite que o texto ocupe o espaço restante */
+}
+
+
+/* --- Responsividade para telas pequenas --- */
+@media (max-width: 800px) {
+    .tela, .container-fluid {
+        padding: 8px;
+    }
+}
+
+
+/* --- Estilos ESPECÍFICOS para impressão (PDF) --- */
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 11pt;
+        line-height: 1.25;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        color: #000;
+    }
+
+    .container-fluid {
+        /* Usar padding em mm para controle preciso nas margens do PDF */
+        padding: 0 10mm !important; 
+    }
+
+    /* Regra para todas as 'telas' no PDF */
+    .tela {
+        border: none !important;
+        padding: 0 !important;
+        margin-bottom: 0 !important;
+        box-shadow: none !important;
+        /* O page-break-after: always; para todas as telas será substituído abaixo ou controlado pelo page-break-before */
+    }
+
+    /* Regra de quebra de página mais controlada para evitar página em branco no final: */
+    /* Aplica-se a toda 'tela' que é precedida por outra 'tela' (ou seja, da segunda tela em diante) */
+    .tela + .tela {
+        page-break-before: always !important;
+    }
+
+    /* A ÚLTIMA TELA NÃO DEVE TER NENHUMA QUEBRA DE PÁGINA APÓS ELA. */
+    /* Garante que o conteúdo final termine e não force uma nova página em branco. */
+    .tela:last-child {
+        page-break-after: avoid !important; /* Usar 'avoid' para ser mais enfático */
+        page-break-inside: avoid !important; /* Evita quebra dentro da última tela, se possível */
+        margin-bottom: 0 !important; /* Apenas para garantir que não haja margem extra no final */
+    }
+
+    h1, h2, h3, h4, h5 {
+        color: #000 !important;
+        text-align: left !important;
+        margin-top: 15px !important;
+        margin-bottom: 5px !important;
+    }
+    
+    .tela h1 {
+        text-align: center !important;
+        margin-top: 0 !important;
+        margin-bottom: 20px !important;
+        font-size: 2.2em !important;
+    }
+
+    section {
+        margin-bottom: 15px !important;
+    }
+
+    /* Estilos para alinhamento de ícones em listas no PDF */
+    ul li {
+        list-style: none !important;
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+        display: flex !important;
+        align-items: flex-start !important;
+        margin-bottom: 5px !important;
+        text-indent: -1.2em;
+        padding-left: 1.2em;
+    }
+
+    .p-2 {
+        display: flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        padding: 3px !important;
+        margin-bottom: 1px !important;
+        background-color: transparent !important;
+        border: none !important;
+        text-align: left !important;
+    }
+
+    .p-3 {
+        padding: 4px !important;
+        margin-bottom: 1px !important;
+        background-color: transparent !important;
+        border: none !important;
+    }
+
+    .row.g-2 > div, .container .row > div {
+        padding: 0 !important;
+    }
+    .col-md-6 {
+        width: 50% !important;
+        float: left !important;
+    }
+    .col-md-6:nth-child(odd) {
+        clear: left;
+    }
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .card {
+        border: 1px solid #eee !important;
+        margin-bottom: 10px !important;
+        box-shadow: none !important;
+    }
+    .card-body {
+        padding: 8px !important;
+    }
+    .card-title {
+        margin-bottom: 4px !important;
+        font-size: 1.1em !important;
+    }
+    .card-text ul {
+        margin-left: 15px !important;
+    }
+    .card-text li {
+        margin-bottom: 1px !important;
+    }
+
+    .btn {
+        display: none !important;
+    }
+
+    a[style*="background"] {
+        padding: 4px 10px !important;
+        border-radius: 4px !important;
+        font-size: 0.9em !important;
+        display: block !important;
+        text-align: center;
+        background: #0057b8 !important;
+        color: #fff !important;
+        border: none !important;
+    }
+}
