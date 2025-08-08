@@ -10,8 +10,7 @@ Este é um projeto de portfólio pessoal, construído do zero para demonstrar ha
 
 O objetivo é criar uma presença digital limpa e funcional, onde a transição entre as páginas é fluida e segura.
 
-> **Sugestão:** Você pode adicionar uma imagem ou GIF do seu portfólio aqui para um impacto visual ainda maior\!
-> `![Captura de tela do projeto](caminho/para/sua-imagem.png)`
+<img width="512" height="279" alt="image" src="https://github.com/user-attachments/assets/401c3eb9-4385-47c3-893f-0023464a4e0e" />
 
 -----
 
