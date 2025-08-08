@@ -1,9 +1,16 @@
  {
-  "cleanUrls": true,
   "routes": [
     {
       "src": "/api/(.*)",
       "dest": "/servidor.js"
+    },
+    {
+      "src": "/servico",
+      "dest": "/servico.html"
+    },
+    {
+      "src": "/contato",
+      "dest": "/contato.html"
     }
   ]
  }
