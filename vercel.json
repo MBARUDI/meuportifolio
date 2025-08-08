@@ -1,15 +1,9 @@
-{
-  "version": 2,
-  "builds": [
-    {
-      "src": "servidor.js",
-      "use": "@vercel/node"
-    }
-  ],
+ {
+  "cleanUrls": true,
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "servidor.js"
+      "src": "/api/(.*)",
+      "dest": "/servidor.js"
     }
   ]
-}
+ }
